@@ -1,5 +1,7 @@
 import React from "react";
 import Cart from "./Components/Cart";
+import RouteSwitch from "./RouteSwitch";
+
 
 const App = () => {
   return (
@@ -12,12 +14,10 @@ const App = () => {
 
           <Cart />
         </div>
-
-        {/*<Nav />*/}
       </header>
 
       <div className="MainContainer">
-        
+        <RouteSwitch />
       </div>
 
       <footer> Copyright <span>&copy;</span> ReezyTech</footer>
