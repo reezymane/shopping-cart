@@ -11,4 +11,11 @@ describe ("Cart component", () => {
         expect(imgElement).toBeInTheDocument();
         expect(imgElement).toHaveAttribute("src", "../Assets/shopping-cart.png");
     });
+
+    it("renders prop value correctly", () => {
+        const cartCount = "0";
+        render(<Cart cartCount={cartCount} />);
+
+        expect(screen.getByTestId("CartCount").textContent).toMatch("0");
+    });
 });
