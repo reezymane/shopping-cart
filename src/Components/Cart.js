@@ -5,7 +5,7 @@ const Cart = (prop) => {
         <div className="Cart">
             <img src="../Assets/shopping-cart.png" alt="Shopping Cart" />
 
-            <div className="CartCount">
+            <div className="CartCount" data-testid="CartCount">
                 {prop.cartCount}
             </div>
         </div>
