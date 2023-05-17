@@ -17,14 +17,7 @@ const App = () => {
       </header>
 
       <div className="MainContainer">
-        <div className="SiteInfo">
-          <h2>Welcome to my Mock Store!</h2>
-          <p></p>
-        </div>
-
-        <div className="Logo">
-          <img alt="Website Logo"/>
-        </div>
+        
       </div>
 
       <footer> Copyright <span>&copy;</span> ReezyTech</footer>
