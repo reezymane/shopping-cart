@@ -1,6 +1,6 @@
 import React from "react";
 import Cart from "./Components/Cart";
-import RouteSwitch from "./RouteSwitch";
+import RouteSwitch from "./Components/RouteSwitch";
 
 
 const App = () => {
