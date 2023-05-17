@@ -6,6 +6,9 @@ import Cart from "./Cart";
 describe ("Cart component", () => {
     it("renders the correct image with the expected src", () => {
         render(<Cart />);
-        expect(screen.getByRole("img")).toBeInTheDocument();
+
+        const imgElement = screen.getByRole("img");
+        expect(imgElement).toBeInTheDocument();
+        expect(imgElement).toHaveAttribute("src", "../Assets/shopping-cart.png");
     });
 });
