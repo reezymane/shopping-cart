@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
 import Cart from "./Cart";
+import ShoppingCart from "../Assets/cart.png";
 
 describe ("Cart component", () => {
     it("renders the correct image with the expected src", () => {
@@ -9,7 +10,7 @@ describe ("Cart component", () => {
 
         const imgElement = screen.getByRole("img");
         expect(imgElement).toBeInTheDocument();
-        expect(imgElement).toHaveAttribute("src", "../Assets/shopping-cart.png");
+        expect(imgElement).toHaveAttribute("src", ShoppingCart);
     });
 
     it("renders prop value correctly", () => {
