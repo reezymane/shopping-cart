@@ -3,7 +3,7 @@ import React from "react";
 const Cart = (prop) => {
     return (
         <div className="Cart">
-            <img alt="Shopping Cart" src="../Assets/shopping-cart.png"/>
+            <img src="../Assets/shopping-cart.png" alt="Shopping Cart" />
 
             <div className="CartCount">
                 {prop.cartCount}
