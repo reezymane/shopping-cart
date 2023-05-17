@@ -1,4 +1,5 @@
 import React from "react";
+import Cart from "./Components/Cart";
 
 const App = () => {
   return (
@@ -9,7 +10,7 @@ const App = () => {
             <h1>Mock Store</h1>
           </div>
 
-          {/*<Cart />*/}
+          <Cart />
         </div>
 
         {/*<Nav />*/}
