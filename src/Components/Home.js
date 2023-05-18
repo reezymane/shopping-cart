@@ -19,7 +19,7 @@ const Home = () => {
                 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
 
-            <img src={Logo} alt="Store Logo" />
+            <img src={Logo} alt="Store Logo" className="Logo"/>
         </div> 
     );  
 };
