@@ -6,6 +6,6 @@ import Home from "./Home";
 describe("Home component", () => {
     it("renders the correct site info heading", () => {
         render(<Home />)
-        expect(screen.getByRole("heading", {level: 2}).textContent).toMatch(/welcome to mock store!/i);
+        expect(screen.getByRole("heading", {level: 2}).textContent).toMatch(/welcome to my mock store!/i);
     });
 });
