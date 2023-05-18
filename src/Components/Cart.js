@@ -4,7 +4,7 @@ import ShoppingCart from "../Assets/cart.png";
 const Cart = (prop) => {
     return (
         <div className="Cart">
-            <img src={ShoppingCart} alt="Shopping Cart" />
+            <img src={ShoppingCart} alt="Shopping Cart" className="CartImg"/>
 
             <div className="CartCount" data-testid="CartCount">
                 {prop.cartCount}
