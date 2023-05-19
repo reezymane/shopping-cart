@@ -7,5 +7,6 @@ describe("Nav component", () => {
         render(<Nav />);
         const links = screen.getAllByRole("listitem");
         expect(links[0].textContent).toMatch(/home/i);
+        expect(links[1].textContent).toMatch(/shop/i);
     });
 });
