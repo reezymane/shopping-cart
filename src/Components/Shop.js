@@ -20,29 +20,9 @@ const Shop = () => {
 
     const items = [goldWatch, emeraldNecklace];
 
-    // Utility function to shuffle the array
-    const shuffle = (array) => {
-        let currentIndex = array.length,
-            temporaryValue,
-            randomIndex;
-  
-        while (currentIndex !== 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
-            temporaryValue = array[currentIndex];
-            array[currentIndex] = array[randomIndex];
-            array[randomIndex] = temporaryValue;
-        }
-  
-        return array;
-    };
-
-    // Randomize the order of items
-    const shuffledItems = shuffle(items);
-
     return (
         <div>
-            {shuffledItems.map((item, index) => (
+            {items.map((item, index) => (
                 <Card key={index} item={item} />
             ))}
         </div>
