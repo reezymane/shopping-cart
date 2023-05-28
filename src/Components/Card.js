@@ -9,12 +9,12 @@ const Card = (props) => {
 
     const decrementQty = () => {
         if (itemQuantity > 0) {
-            setItemQuantity(prevItemQuantity => prevItemQuantity - 1);
+            setItemQuantity(prevItemQuantity => parseInt(prevItemQuantity) - 1);
         };
     };
 
     const incrementQty = () => {
-        setItemQuantity(prevItemQuantity => prevItemQuantity + 1);
+        setItemQuantity(prevItemQuantity => parseInt(prevItemQuantity) + 1);
     };
 
     return (
@@ -31,7 +31,7 @@ const Card = (props) => {
                 </button>
 
                 <input
-                 type="number"
+                 type="text"
                  id="qty"
                  onChange={handleQtyChange}
                  value={itemQuantity}
