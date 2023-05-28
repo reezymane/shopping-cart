@@ -34,7 +34,7 @@ describe("Card component", () => {
         };
         
         render(<Card item={goldWatch} />);
-        const input = screen.getByRole("spinbutton");
+        const input = screen.getByRole("textbox");
         fireEvent.change(input, { target: { value: "5" } });
     
         expect(input.value).toBe("5");
