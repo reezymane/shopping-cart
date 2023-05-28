@@ -13,6 +13,10 @@ const Card = (props) => {
         };
     };
 
+    const incrementQty = () => {
+        setItemQuantity(prevItemQuantity => prevItemQuantity + 1);
+    };
+
     return (
         <div className="Card" data-testid="item-card">
             <h3>{props.item.name}</h3>
@@ -33,7 +37,9 @@ const Card = (props) => {
                  value={itemQuantity}
                 /><br />
 
-                <button type="button">+</button><br />
+                <button type="button" onClick={incrementQty}>
+                    +
+                </button><br />
 
                 <button type="submit">Add to Cart</button>
             </form>
