@@ -3,6 +3,10 @@ import React, { useState } from "react";
 const Card = (props) => {
     const [itemQuantity, setItemQuantity] = useState(0);
     
+    const handleQtyChange = (event) => {
+        setItemQuantity(event.target.value);
+    };
+
     return (
         <div className="Card" data-testid="item-card">
             <h3>{props.item.name}</h3>
@@ -17,6 +21,7 @@ const Card = (props) => {
                 <input
                  type="number"
                  id="qty"
+                 onChange={handleQtyChange}
                  value={itemQuantity}
                 /><br />
 
