@@ -7,6 +7,12 @@ const Card = (props) => {
         setItemQuantity(event.target.value);
     };
 
+    const decrementQty = () => {
+        if (itemQuantity > 0) {
+            setItemQuantity(prevItemQuantity => prevItemQuantity - 1);
+        };
+    };
+
     return (
         <div className="Card" data-testid="item-card">
             <h3>{props.item.name}</h3>
@@ -16,7 +22,9 @@ const Card = (props) => {
             <form className="itemQty">
                 <label htmlFor="qty">Quantity:</label><br />
 
-                <button type="button">-</button>
+                <button type="button" onClick={decrementQty}>
+                    -
+                </button>
 
                 <input
                  type="number"
