@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
 import Card from "./Card";
 import Watch from "../Assets/watch.png";
@@ -24,4 +24,19 @@ describe("Card component", () => {
         // Assert that the card displays the correct item description
         expect(card).toHaveTextContent('Experience elegance with this gold watch');
     });
+
+    it('should update item quantity when input value changes', () => {
+        const goldWatch = {
+            name: "Gold Watch",
+            img: Watch,
+            price: 5200.00,
+            description: "Experience elegance with this gold watch featuring a..."
+        };
+        
+        render(<Card item={goldWatch} />);
+        const input = screen.getByRole("spinbutton");
+        fireEvent.change(input, { target: { value: "5" } });
+    
+        expect(input.value).toBe("5");
+      });
 });
