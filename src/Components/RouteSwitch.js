@@ -10,7 +10,7 @@ const RouteSwitch = (props) => {
             <Nav />
             <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/shop" element={<Shop cartQty={props.cartQty}/>}/>
+                <Route path="/shop" element={<Shop cartQty={props.cartQty} setCartQty={props.setCartQty} />}/>
             </Routes>
         </BrowserRouter>
     );

@@ -23,7 +23,7 @@ const Shop = (props) => {
     return (
         <div>
             {items.map((item, index) => (
-                <Card item={item} cartQty={props.cartQty} />
+                <Card item={item} cartQty={props.cartQty} setCartQty={props.setCartQty} />
             ))}
         </div>
     );

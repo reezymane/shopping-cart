@@ -4,7 +4,7 @@ import RouteSwitch from "./Components/RouteSwitch";
 
 
 const App = () => {
-  const [cartQty] = useState(0);
+  const [cartQty, setCartQty] = useState(0);
   
   return (
     <div className="App">
@@ -14,12 +14,12 @@ const App = () => {
             <h1>Mock Store</h1>
           </div>
 
-          <Cart cartQty={cartQty}/>
+          <Cart cartQty={cartQty} setCartQty={setCartQty} />
         </div>
       </header>
 
       <div className="MainContainer">
-        <RouteSwitch cartQty={cartQty}/>
+        <RouteSwitch cartQty={cartQty} setCartQty={setCartQty} />
       </div>
 
       <footer> Copyright <span>&copy;</span> ReezyTech</footer>
