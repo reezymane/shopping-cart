@@ -1,21 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import QuantityForm from "./QuantityForm";
 
 const Card = (props) => {
-    const [itemQuantity, setItemQuantity] = useState(0);
-    
-    const handleQtyChange = (event) => {
-        setItemQuantity(event.target.value);
-    };
-
-    const decrementQty = () => {
-        if (itemQuantity > 0) {
-            setItemQuantity(prevItemQuantity => parseInt(prevItemQuantity) - 1);
-        };
-    };
-
-    const incrementQty = () => {
-        setItemQuantity(prevItemQuantity => parseInt(prevItemQuantity) + 1);
-    };
 
     return (
         <div className="Card" data-testid="item-card">
@@ -23,26 +9,7 @@ const Card = (props) => {
             <img src={props.item.img} alt={props.item.name} />
             <p>Price: ${props.item.price.toFixed(2)}</p>
 
-            <form className="itemQty">
-                <label htmlFor="qty">Quantity:</label><br />
-
-                <button type="button" onClick={decrementQty}>
-                    -
-                </button>
-
-                <input
-                 type="text"
-                 id="qty"
-                 onChange={handleQtyChange}
-                 value={itemQuantity}
-                /><br />
-
-                <button type="button" onClick={incrementQty}>
-                    +
-                </button><br />
-
-                <button type="submit">Add to Cart</button>
-            </form>
+            <QuantityForm item={props.item} />
 
             <p>{props.item.description}</p>
         </div> 
