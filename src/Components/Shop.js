@@ -3,7 +3,7 @@ import Watch from "../Assets/watch.png";
 import Necklace from "../Assets/necklace.png";
 import Card from "./Card";
 
-const Shop = () => {
+const Shop = (props) => {
     const [goldWatch] = useState({
         name: "Gold Watch",
         img: Watch,
@@ -23,7 +23,7 @@ const Shop = () => {
     return (
         <div>
             {items.map((item, index) => (
-                <Card key={index} item={item} />
+                <Card item={item} cartQty={props.cartQty} />
             ))}
         </div>
     );
