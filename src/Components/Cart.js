@@ -1,13 +1,13 @@
 import React from "react";
 import ShoppingCart from "../Assets/cart.png";
 
-const Cart = (prop) => {
+const Cart = (props) => {
     return (
         <div className="Cart">
             <img src={ShoppingCart} alt="Shopping Cart" className="CartImg"/>
 
             <div className="CartCount" data-testid="CartCount">
-                {prop.cartCount}
+                {props.cartQty}
             </div>
         </div>
     );
