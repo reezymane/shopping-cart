@@ -23,8 +23,15 @@ const Quantity = (props) => {
         setItemQuantity(prevItemQuantity => prevItemQuantity + 1);
     };
 
+    const addToCart = (event) => {
+        event.preventDefault();
+
+        props.setCartQty(prevCartQty => prevCartQty + itemQuantity);
+        setItemQuantity(0);
+    };
+
     return (
-        <form className="itemQty">
+        <form className="itemQty" onSubmit={addToCart}>
             <label htmlFor="qty">Quantity:</label><br />
 
             <button type="button" onClick={decrementQty}>
