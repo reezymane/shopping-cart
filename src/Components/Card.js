@@ -9,7 +9,7 @@ const Card = (props) => {
             <img src={props.item.img} alt={props.item.name} />
             <p>Price: ${props.item.price.toFixed(2)}</p>
 
-            <QuantityForm item={props.item} cartQty={props.cartQty} />
+            <QuantityForm item={props.item} cartQty={props.cartQty} setCartQty={props.setCartQty} />
 
             <p>{props.item.description}</p>
         </div> 
