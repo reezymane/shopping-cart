@@ -1,7 +1,17 @@
+.App {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     display: flex;
+    background-color: rgba(112, 128, 144, 0.602);
 }
 
 .Title {
+    flex-grow: 1;
+}
+
+.MainContainer {
     flex-grow: 1;
 }
