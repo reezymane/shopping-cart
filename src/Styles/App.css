@@ -5,7 +5,10 @@
 
 header {
     display: flex;
+    align-items: center;
     background-color: rgba(112, 128, 144, 0.602);
+    padding: 15px;
+    height: 50px;
 }
 
 .Title {
