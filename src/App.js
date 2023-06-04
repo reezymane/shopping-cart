@@ -10,13 +10,11 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="TitleAndCart">
-          <div className="Title">
-            <h1>Mock Store</h1>
-          </div>
-
-          <Cart cartQty={cartQty} setCartQty={setCartQty} />
+        <div className="Title">
+          <h1>Mock Store</h1>
         </div>
+
+        <Cart cartQty={cartQty} setCartQty={setCartQty} />
       </header>
 
       <div className="MainContainer">
