@@ -1,5 +1,6 @@
 import React from "react";
 import ShoppingCart from "../Assets/cart.png";
+import "../Styles/Cart.css";
 
 const Cart = (props) => {
     return (
